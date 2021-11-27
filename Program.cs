@@ -10,14 +10,14 @@ namespace laboratorna3OOP
 
         public TPair(double firstValue, double secondValue)
         {
-            firstValue = this.firstValue;
-            secondValue = this.secondValue;
+            this.firstValue = firstValue;
+            this.secondValue = secondValue;
         }
         public virtual void ShowInfo()
         {
             Console.WriteLine("Перше число: " + firstValue + "\n" + "Друге число: " + secondValue + "\n");
         }
-        public string GetInfo()
+        public virtual string GetInfo()
         {
             return $"Перше число: {firstValue}\nДруге число: {secondValue}\n";
         }
@@ -49,14 +49,14 @@ namespace laboratorna3OOP
         public TTime(double firstValue, double secondValue, int hour, int minute)
             : base(firstValue, secondValue)
         {
-            hour = this.hour;
-            minute = this.minute;
+            this.hour = hour;
+            this.minute = minute;
         }
         public override void ShowInfo()
         {
             Console.WriteLine("Перше число: " + firstValue + "\n" + "Друге число: " + secondValue + "\n" + "Годин: " + hour + "\n"+ "Хвилин: " + minute + "\n");
         }
-        public string GetInfo()
+        public override string GetInfo()
         {
             return $"Перше число: {firstValue}\nДруге число: {secondValue}\nГодин: {hour} \n Хвилин: {minute}\n";
         }
@@ -70,14 +70,14 @@ namespace laboratorna3OOP
         public TMoney(double firstValue, double secondValue, int hryvnia, int coin)
             : base(firstValue, secondValue)
         {
-            hryvnia = this.hryvnia;
-            coin = this.coin;
+            this.hryvnia = hryvnia;
+            this.coin = coin;
         }
         public override void ShowInfo()
         {
             Console.WriteLine("Перше число: " + firstValue + "\n" + "Друге число: " + secondValue + "\n" + "Гривень: " + hryvnia + "\n" + "Копійок: " + coin + "\n");
         }
-        public string GetInfo()
+        public override string GetInfo()
         {
             return $"Перше число: {firstValue}\nДруге число: {secondValue}\nГривень: {hryvnia}\n Копійок: {coin}\n";
         }
